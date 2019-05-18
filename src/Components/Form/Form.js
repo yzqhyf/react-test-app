@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Form extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = { value: '' };
     }
 
     handleOnSubmit = () => {
@@ -22,7 +22,7 @@ class Form extends Component {
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     <label>
-                        name: <input type="text" value={this.state.value} onChange={this.handleOnChange}/>
+                        name: <input type="text" value={this.state.value} onChange={this.handleOnChange} />
                     </label>
                     <input type="submit" value="submit" />
                 </form>
