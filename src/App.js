@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, NavLink, Switch} from "react-router-dom";
 import './App.css';
-import Button from './Components/Button/Button';
-import Form from './Components/Form/Form';
-import MouseTracker from './Components/Mouse/MouseTracker';
-import Stream from './Components/Stream/Stream';
+import Button from './components/Button/Button';
+import Form from './components/Form/Form';
+import MouseTracker from './components/Mouse/MouseTracker';
+import Stream from './components/Stream/Stream';
 
 class App extends Component {
   render() {
