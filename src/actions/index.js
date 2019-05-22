@@ -1,5 +1,9 @@
-import { setTrack } from './track.js';
+import { setTrack } from './track';
+import { increment, decrement, reset } from './counter';
 
 export {
-    setTrack
+    setTrack,
+    increment,
+    decrement,
+    reset
 }

@@ -6,6 +6,7 @@ class Track extends Component {
         super(props);
         this.state = {};
         this.handleClick = this.handleClick.bind(this);
+        this.increment = this.props.increment.bind(this);
     }
 
     handleClick = track => () => {
@@ -13,6 +14,7 @@ class Track extends Component {
         this.setState({
             [key]: !this.state[key]
         });
+        this.increment(this.props.count);
         // console.log(this.state);
     }
 
@@ -25,6 +27,7 @@ class Track extends Component {
                         return (
                             <div key={track.id}>{track.title}
                                 <button style={{ width: '60px' }} onClick={this.handleClick(track)}>{this.state[track.id] ? 'Dislike' : 'Like'}</button>
+                                <div>Likes {this.props.count}</div>
                             </div>
                         );
                     })
@@ -35,7 +38,9 @@ class Track extends Component {
 }
 
 Track.propTypes = {
-    track: PropTypes.array
+    track: PropTypes.array,
+    increment: PropTypes.func,
+    count: PropTypes.number
 }
 
 export default Track;

@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
 import Track from './Track';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-// const tracks = [
-//     {
-//         id: '1',
-//         title: 'Track A'
-//     },
-//     {
-//         id: '2',
-//         title: 'Track B'
-//     }
-// ];
-
-const mapStateToProps = state => {
-    return { tracks: state.track }
-}
+// const mapStateToProps = state => {
+//     return { tracks: state.track }
+// }
 
 class Stream extends Component {
     constructor(props) {
@@ -24,9 +12,10 @@ class Stream extends Component {
     }
 
     render() {
+        const { increment, decrement, reset } = this.props;
         return (
             <div>
-                <Track track={this.props.tracks} />
+                <Track track={this.props.tracks} increment={increment} decrement={decrement} reset={reset} />
             </div>
         );
     }
@@ -39,7 +28,11 @@ class Stream extends Component {
 // }
 
 Stream.propTypes = {
-    tracks: PropTypes.array
+    tracks: PropTypes.array,
+    increment: PropTypes.func,
+    decrement: PropTypes.func,
+    reset: PropTypes.func
 }
 
-export default connect(mapStateToProps)(Stream);
+export default Stream;
+// export default connect(mapStateToProps)(Stream);

@@ -4,7 +4,7 @@ import './App.css';
 import Button from './components/Button/Button';
 import Form from './components/Form/Form';
 import MouseTracker from './components/Mouse/MouseTracker';
-import Stream from './components/Stream/Stream';
+import Stream from './components/Stream/index';
 
 class App extends Component {
   render() {
