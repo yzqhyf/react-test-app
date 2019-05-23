@@ -9,11 +9,15 @@ import './index.css';
 const tracks = [
   {
       id: '1',
-      title: 'Track A'
+      title: 'Track A',
+      like: 0,
+      dislike: 0
   },
   {
       id: '2',
-      title: 'Track B'
+      title: 'Track B',
+      like: 0,
+      dislike: 0
   }
 ];
 

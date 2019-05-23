@@ -5,15 +5,14 @@ import * as actions from '../../actions';
 
 function mapStateToProps(state) {
     return {
-        tracks: state.track,
-        count: state.count
+        tracks: state.track
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        increment: function(count) { dispatch(actions.increment(count)) },
-        decrement: function(count) { dispatch(actions.decrement(count)) },
+        increment: function(id) { dispatch(actions.increment(id)) },
+        decrement: function(id) { dispatch(actions.decrement(id)) },
         reset: function() { dispatch(actions.reset()) }
     }
 }

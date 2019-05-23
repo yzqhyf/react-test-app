@@ -1,13 +1,19 @@
 import * as actionTypes from '../constants/actionType';
 
-export default function(state={count: 0}, action) {
+export default function(state=[], action) {
     switch(action.type) {
         case actionTypes.INCREMENT:
-            return { ...state, count: state.count++ };
+            return state.tracks.map((track, index) => {
+                return index === action.id ? {...track, count: track.count+1} : track
+            });
         case actionTypes.DECREMENT:
-            return { ...state, count: state.count-- };
+            return state.tracks.map((track, index) => {
+                return index === action.id ? {...track, count: track.count-1} : track
+            });
         case actionTypes.RESET:
-            return { ...state, count: 0 };
+            return state.tracks.map((track) => {
+                return {...track, count: 0}
+            });
         default:
             return state;
     }

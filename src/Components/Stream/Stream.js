@@ -15,7 +15,7 @@ class Stream extends Component {
         const { increment, decrement, reset } = this.props;
         return (
             <div>
-                <Track track={this.props.tracks} increment={increment} decrement={decrement} reset={reset} />
+                <Track tracks={this.props.tracks} increment={increment} decrement={decrement} reset={reset} />
             </div>
         );
     }
